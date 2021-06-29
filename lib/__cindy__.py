@@ -1,10 +1,10 @@
 pw_tambahan="""
-bismillah|sayang|anjing|kontol|indonesia
+bismillah|sayang|indonesia
 """.strip().split("|")
 ngntd=((())>(()))+((())>(()))
 def awok(ngentod):
 	ngentod=ngentod.lower()
-	return [ngentod,ngentod+"123",ngentod+"1234",ngentod+"12345"]
+	return [ngentod,ngentod+"123",ngentod+"12345"]
 def pw_list(ngentot):
 	if len(ngentot)==2:
 		_yayanganteng_=ngentot[1].split(" ")
