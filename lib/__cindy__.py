@@ -1,5 +1,5 @@
 pw_tambahan="""
-bismillah|sayang|indonesia
+bismillah|sayang
 """.strip().split("|")
 ngntd=((())>(()))+((())>(()))
 def awok(ngentod):
