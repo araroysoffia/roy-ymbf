@@ -696,7 +696,7 @@ class ngewe:
 						elif cin in("1","01"):
 							print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
 							print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
+							print('\n [!] Matikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
 									try:
@@ -707,7 +707,7 @@ class ngewe:
 						elif cin in("2","02"):
 							print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
 							print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
+							print('\n [!] Matikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
 									try:
@@ -718,7 +718,7 @@ class ngewe:
 						elif cin in("3","03"):
 							print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
 							print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
+							print('\n [!] Matikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
 									try:
@@ -851,7 +851,7 @@ class ngewe:
 		elif wibu in["1","01"]:
 			print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
 			print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
+			print('\n [!] Matikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
 					try:
@@ -863,7 +863,7 @@ class ngewe:
 		elif wibu in["2","02"]:
 			print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
 			print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
+			print('\n [!] Matikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
 					try:
@@ -875,7 +875,7 @@ class ngewe:
 		elif wibu in["3","03"]:
 			print('\n [+] Hasil OK -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
 			print(' [+] Hasil CP -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
+			print('\n [!] Matikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
 					try:
