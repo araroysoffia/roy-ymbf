@@ -32,7 +32,7 @@ try: import requests as req
 except ModuleNotFoundError: os.system("python -m pip install requests");restart()
 try: from bs4 import BeautifulSoup as parser
 except ModuleNotFoundError: os.system("python -m pip install bs4");restart()
-user_agent = random.choice(["Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"])
+user_agent = random.choice(["Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+Trident/5.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+Tablet+PC+2.0;+MS-RTC+LM+8;+OfficeLiveConnector.1.5;+OfficeLivePatch.1.3;+.NET4.0C)"])
 runtah=["lib/__pycache__"]
 try:
 	hapus(runtah[0])
@@ -750,7 +750,7 @@ class ngewe:
 		for pw in _yan_:
 			try: os.mkdir('results')
 			except: pass
-			user_agent = random.choice(["Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko) ChromePlus/4.0.222.3 Chrome/4.0.222.3 Safari/532.2"])
+			user_agent = random.choice(["Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+Trident/5.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+Tablet+PC+2.0;+MS-RTC+LM+8;+OfficeLiveConnector.1.5;+OfficeLivePatch.1.3;+.NET4.0C)"])
 			headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
@@ -889,7 +889,7 @@ class ngewe:
 			
 def yntkts(kuki):
     try:
-        headerz = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Kiwi Chrome/68.0.3438.0 Safari/537.36', 
+        headerz = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Kiwi Chrome/90.0.4430.210 Safari/537.36', 
            'referer': 'https://m.facebook.com/', 
            'host': 'm.facebook.com', 
            'origin': 'https://m.facebook.com', 
