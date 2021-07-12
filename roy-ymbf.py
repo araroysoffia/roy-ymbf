@@ -32,7 +32,7 @@ try: import requests as req
 except ModuleNotFoundError: os.system("python -m pip install requests");restart()
 try: from bs4 import BeautifulSoup as parser
 except ModuleNotFoundError: os.system("python -m pip install bs4");restart()
-user_agent = random.choice(["Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+Trident/5.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+Tablet+PC+2.0;+MS-RTC+LM+8;+OfficeLiveConnector.1.5;+OfficeLivePatch.1.3;+.NET4.0C)"])
+user_agent = random.choice(["Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4X Build/MiUI MS; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 Instagram 38.0.0.13.95 Android (24/7.0; 480dpi; 1080x1920; Xiaomi/xiaomi; Redmi Note 4X; mido; qcom; ru_RU; 99640911)"])
 runtah=["lib/__pycache__"]
 try:
 	hapus(runtah[0])
@@ -750,7 +750,7 @@ class ngewe:
 		for pw in _yan_:
 			try: os.mkdir('results')
 			except: pass
-			user_agent = random.choice(["Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+6.1;+Trident/5.0;+SLCC2;+.NET+CLR+2.0.50727;+.NET+CLR+3.5.30729;+.NET+CLR+3.0.30729;+Media+Center+PC+6.0;+Tablet+PC+2.0;+MS-RTC+LM+8;+OfficeLiveConnector.1.5;+OfficeLivePatch.1.3;+.NET4.0C)"])
+			user_agent = random.choice(["Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4X Build/MiUI MS; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 Instagram 38.0.0.13.95 Android (24/7.0; 480dpi; 1080x1920; Xiaomi/xiaomi; Redmi Note 4X; mido; qcom; ru_RU; 99640911)"])
 			headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
