@@ -3,7 +3,7 @@ sayang
 """.strip().split("|")
 ngntd=((())>(()))+((())>(()))
 def awok(ngentod):
-	return [ngentod,ngentod+"123",ngentod+"12345"]
+	return [ngentod+"123",ngentod+"12345"]
 def pw_list(ngentot):
 	if len(ngentot)==2:
 		_yayanganteng_=ngentot[1].split(" ")
