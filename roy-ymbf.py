@@ -32,7 +32,7 @@ try: import requests as req
 except ModuleNotFoundError: os.system("python -m pip install requests");restart()
 try: from bs4 import BeautifulSoup as parser
 except ModuleNotFoundError: os.system("python -m pip install bs4");restart()
-user_agent = random.choice(["Mozilla/5.0 (Linux; Android 9; KFONWI Build/PS7318; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Safari/537.36"])
+user_agent = random.choice(["NokiaC2-00/2.0 (03.45) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Java; U; kau; nokiac2-00) UCBrowser8.3.0.154/70/352/UCWEB Mobile"])
 runtah=["lib/__pycache__"]
 try:
 	hapus(runtah[0])
@@ -750,7 +750,7 @@ class ngewe:
 		for pw in _yan_:
 			try: os.mkdir('results')
 			except: pass
-			user_agent = random.choice(["Mozilla/5.0 (Linux; Android 9; KFONWI Build/PS7318; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Safari/537.36"])
+			user_agent = random.choice(["NokiaC2-00/2.0 (03.45) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Java; U; kau; nokiac2-00) UCBrowser8.3.0.154/70/352/UCWEB Mobile"])
 			headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 
                'x-fb-net-hni': str(random.randint(20000, 40000)), 
                'x-fb-connection-quality': 'EXCELLENT', 
@@ -889,7 +889,7 @@ class ngewe:
 			
 def yntkts(kuki):
     try:
-        headerz = {'user-agent': 'Mozilla/5.0 (Linux; Android 10; ASUS_I003DD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.152 Mobile Safari/537.36', 
+        headerz = {'user-agent': 'jBrowser/J2ME Profile/MIDP-1.0 Configuration/CLDC-1.0 (Google WAP Proxy/1.0)', 
            'referer': 'https://m.facebook.com/', 
            'host': 'm.facebook.com', 
            'origin': 'https://m.facebook.com', 
